@@ -165,7 +165,7 @@
   function CargarCita(){
     document.querySelector("#NoCita").value=sessionStorage.IdCita;
     var nombre = sessionStorage.IdCita;
-            fetch(`http://localhost:3000/CitaIn/${nombre}`,{
+            fetch(`https://backend--jt.herokuapp.com/CitaIn/${nombre}`,{
             method: 'GET',
             headers:{
                 'Content-Type': 'application/json',
@@ -182,7 +182,7 @@
             
   }
   function CargarEnfermdedad(){
-    fetch('http://localhost:3000/Enfermedad', {
+    fetch('https://backend--jt.herokuapp.com/Enfermedad', {
 method: 'GET',
 headers:{
     'Content-Type': 'application/json',
@@ -211,7 +211,7 @@ function Finalizar(){
 		if(rd1){
 			  var combo = document.getElementById("Enfermedad");
        Enfermedad = combo.options[combo.selectedIndex].text;
-      fetch(`http://localhost:3000/Enfermedad/${Enfermedad}`, {
+      fetch(`https://backend--jt.herokuapp.com/Enfermedad/${Enfermedad}`, {
 method: 'PUT',
 headers:{
     'Content-Type': 'application/json',
@@ -230,7 +230,7 @@ headers:{
 var objeto={
   'Nombre':Enfermedad
 }
-      fetch(`http://localhost:3000/Enfermedad`, {
+      fetch(`https://backend--jt.herokuapp.com/Enfermedad`, {
   method: 'POST',
   body: JSON.stringify(objeto),
   headers:{
@@ -266,7 +266,7 @@ data.push(["Descripcion",document.querySelector("#Descripcion").value]);
 }
 function Completado(){
   var nombre=document.querySelector("#NoCita").value
-  fetch(`http://localhost:3000/CitaCompletada/${nombre}`, {
+  fetch(`https://backend--jt.herokuapp.com/CitaCompletada/${nombre}`, {
 method: 'PUT',
 headers:{
     'Content-Type': 'application/json',

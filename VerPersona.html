@@ -147,7 +147,7 @@ var Contador=1
 
 if(sessionStorage.buscar=="Doc"){
 var columns = ["No.", "Nombre", "Apellido", "Nacimiento","Telefono","Especialidad"];
-fetch('http://localhost:3000/Doctor', {
+fetch('https://backend--jt.herokuapp.com/Doctor', {
 method: 'GET',
 headers:{
     'Content-Type': 'application/json',
@@ -174,7 +174,7 @@ headers:{
 }else if(sessionStorage.buscar=="Enf"){
   var columns = ["No.", "Nombre", "Apellido", "Nacimiento","Telefono"];
 cadena=""
-fetch('http://localhost:3000/Enfermeras', {
+fetch('https://backend--jt.herokuapp.com/Enfermeras', {
 method: 'GET',
 headers:{
     'Content-Type': 'application/json',
@@ -199,7 +199,7 @@ headers:{
 })
 }else{
   var columns = ["No.", "Nombre", "Apellido", "Nacimiento","Telefono"];
-fetch('http://localhost:3000/Pacientes', {
+fetch('https://backend--jt.herokuapp.com/Pacientes', {
 method: 'GET',
 headers:{
     'Content-Type': 'application/json',
@@ -267,7 +267,7 @@ function ObtenerPac(){
     var tabla = document.querySelector('#detalles')
 // Esta cadena nos servira para escribir los datos en la tabla.
 var cadena = ''
-fetch('http://localhost:3000/Pacientes', {
+fetch('https://backend--jt.herokuapp.com/Pacientes', {
 method: 'GET',
 headers:{
     'Content-Type': 'application/json',
@@ -296,7 +296,7 @@ function ObtenerDoc(){
     var tabla = document.querySelector('#detalles')
 // Esta cadena nos servira para escribir los datos en la tabla.
 var cadena = ''
-fetch('http://localhost:3000/Doctor', {
+fetch('https://backend--jt.herokuapp.com/Doctor', {
 method: 'GET',
 headers:{
     'Content-Type': 'application/json',
@@ -329,7 +329,7 @@ function ObtenerEnf(){
     var tabla = document.querySelector('#detalles')
 // Esta cadena nos servira para escribir los datos en la tabla.
 var cadena = ''
-fetch('http://localhost:3000/Enfermeras', {
+fetch('https://backend--jt.herokuapp.com/Enfermeras', {
 method: 'GET',
 headers:{
     'Content-Type': 'application/json',

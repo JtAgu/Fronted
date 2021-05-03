@@ -152,7 +152,7 @@
   <script src="assets/js/main.js"></script>
   <script>
 function AgragDoc(){
-    fetch('http://localhost:3000/Doctor', {
+    fetch('https://backend--jt.herokuapp.com/Doctor', {
 method: 'GET',
 headers:{
     'Content-Type': 'application/json',
@@ -180,7 +180,7 @@ function Citas(){
         var tabla = document.querySelector('#detalles')
 // Esta cadena nos servira para escribir los datos en la tabla.
 var cadena = ''
-fetch('http://localhost:3000/Cita', {
+fetch('https://backend--jt.herokuapp.com/Cita', {
 method: 'GET',
 headers:{
     'Content-Type': 'application/json',
@@ -214,7 +214,7 @@ headers:{
 
 function Rechazar(boton){
 
-  fetch(`http://localhost:3000/CitaRechazada/${boton.value}`, {
+  fetch(`https://backend--jt.herokuapp.com/CitaRechazada/${boton.value}`, {
 		method: 'PUT',
 		headers:{
 			'Content-Type': 'application/json',
@@ -236,7 +236,7 @@ function Doc(boton){
     Id=boton
     var combo = document.getElementById("Docs");
     var Doc = combo.options[combo.selectedIndex].text;
-    fetch(`http://localhost:3000/Doctor/${Doc}`,{
+    fetch(`https://backend--jt.herokuapp.com/Doctor/${Doc}`,{
 			  method: 'GET',
 			  headers:{
 				  'Content-Type': 'application/json',
@@ -265,7 +265,7 @@ function Aceptar(boton,NombreDoc){
 		}
 		console.log(objeto)
 		// EL METODO MAGICO - EL FETCH
-		fetch(`http://localhost:3000/CitaConfirmada/${boton.value}`, {
+		fetch(`https://backend--jt.herokuapp.com/CitaConfirmada/${boton.value}`, {
 		method: 'PUT',
 		body: JSON.stringify(objeto),
 		headers:{
@@ -294,7 +294,7 @@ function Citas2(){
 var tabla2 = document.querySelector('#detalles2')
 // Esta cadena nos servira para escribir los datos en la tabla.
 var cadena2 = ''
-fetch('http://localhost:3000/Cita', {
+fetch('https://backend--jt.herokuapp.com/Cita', {
 method: 'GET',
 headers:{
     'Content-Type': 'application/json',

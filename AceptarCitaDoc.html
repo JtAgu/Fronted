@@ -150,7 +150,7 @@ function Citas(){
         var tabla = document.querySelector('#detalles')
 // Esta cadena nos servira para escribir los datos en la tabla.
 var cadena = ''
-fetch('http://localhost:3000/Cita', {
+fetch('https://backend--jt.herokuapp.com/Cita', {
 method: 'GET',
 headers:{
     'Content-Type': 'application/json',
@@ -187,7 +187,7 @@ function Citas2(){
 var tabla2 = document.querySelector('#detalles2')
 // Esta cadena nos servira para escribir los datos en la tabla.
 var cadena2 = ''
-fetch('http://localhost:3000/Cita', {
+fetch('https://backend--jt.herokuapp.com/Cita', {
 method: 'GET',
 headers:{
     'Content-Type': 'application/json',
@@ -232,7 +232,7 @@ function Examinar(boton,Paciente){
 }
 function Rechazar(boton){
 
-fetch(`http://localhost:3000/CitaRechazada/${boton.value}`, {
+fetch(`https://backend--jt.herokuapp.com/CitaRechazada/${boton.value}`, {
   method: 'PUT',
   headers:{
     'Content-Type': 'application/json',
@@ -265,7 +265,7 @@ function Aceptar(boton,NombreDoc){
 		}
 		console.log(objeto)
 		// EL METODO MAGICO - EL FETCH
-		fetch(`http://localhost:3000/CitaConfirmada/${boton.value}`, {
+		fetch(`https://backend--jt.herokuapp.com/CitaConfirmada/${boton.value}`, {
 		method: 'PUT',
 		body: JSON.stringify(objeto),
 		headers:{

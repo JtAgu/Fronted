@@ -174,7 +174,7 @@ function ObtenerMedicina(){
     var tabla = document.querySelector('#detalles')
 // Esta cadena nos servira para escribir los datos en la tabla.
 var cadena = ''
-fetch('http://localhost:3000/Medicina', {
+fetch('https://backend--jt.herokuapp.com/Medicina', {
 method: 'GET',
 headers:{
     'Content-Type': 'application/json',
@@ -203,7 +203,7 @@ headers:{
 function Buscar(usu){
   var usuario = usu
     console.log(usuario)
-            fetch(`http://localhost:3000/Medicina/${usuario}`, {
+            fetch(`https://backend--jt.herokuapp.com/Medicina/${usuario}`, {
             method: 'GET',
             headers:{
                 'Content-Type': 'application/json',
@@ -221,7 +221,7 @@ function Buscar(usu){
 function Menos(boton){
   var NomUsu=boton.value
             // La estructura del fetch no cambia, solo la URL donde consume la API y el method.
-            fetch(`http://localhost:3000/MedicinaMenos/${NomUsu}`, {
+            fetch(`https://backend--jt.herokuapp.com/MedicinaMenos/${NomUsu}`, {
             method:"PUT",
             headers:{
                 'Content-Type': 'application/json',
@@ -240,7 +240,7 @@ function Menos(boton){
 function Mas(boton){
   var NomUsu=boton.value
             // La estructura del fetch no cambia, solo la URL donde consume la API y el method.
-            fetch(`http://localhost:3000/MedicinaMas/${NomUsu}`, {
+            fetch(`https://backend--jt.herokuapp.com/MedicinaMas/${NomUsu}`, {
             method:"PUT",
             headers:{
                 'Content-Type': 'application/json',
@@ -260,7 +260,7 @@ function Mas(boton){
 function BusquedaP(boton){
 var usuario=boton.value
 var Con2=0
-fetch('http://localhost:3000/MedicinaFac', {
+fetch('https://backend--jt.herokuapp.com/MedicinaFac', {
 method: 'GET',
 headers:{
     'Content-Type': 'application/json',
@@ -286,7 +286,7 @@ headers:{
 function ActuC(usu){
   var NomUsu=usu
             // La estructura del fetch no cambia, solo la URL donde consume la API y el method.
-            fetch(`http://localhost:3000/MedicinaFac/${NomUsu}`, {
+            fetch(`https://backend--jt.herokuapp.com/MedicinaFac/${NomUsu}`, {
             method:"PUT",
             headers:{
                 'Content-Type': 'application/json',
@@ -316,7 +316,7 @@ function Añadir(Id,Nombre,Descripcion,Precio,Cantidad){
 
 		// EL METODO MAGICO - EL FETCH
 		
-		fetch('http://localhost:3000/MedicinaFac', {
+		fetch('https://backend--jt.herokuapp.com/MedicinaFac', {
 		method: 'POST',
 		body: JSON.stringify(objeto),
 		headers:{
@@ -344,7 +344,7 @@ function ObtenerMedicina2(){
 
 // Esta cadena nos servira para escribir los datos en la tabla.
 var cadena = ''
-fetch('http://localhost:3000/MedicinaFac', {
+fetch('https://backend--jt.herokuapp.com/MedicinaFac', {
 method: 'GET',
 headers:{
     'Content-Type': 'application/json',
@@ -385,7 +385,7 @@ function MasStock(boton){
 
 		// EL METODO MAGICO - EL FETCH
 		
-		fetch(`http://localhost:3000/MedicinaMasMas/${boton.value}`, {
+		fetch(`https://backend--jt.herokuapp.com/MedicinaMasMas/${boton.value}`, {
 		method: 'PUT',
 		body: JSON.stringify(objeto),
 		headers:{
@@ -408,7 +408,7 @@ function MasStock(boton){
 function Restar(boton){
   var NomUsu=boton.value
             // La estructura del fetch no cambia, solo la URL donde consume la API y el method.
-            fetch(`http://localhost:3000/MedicinaFacMenos/${NomUsu}`, {
+            fetch(`https://backend--jt.herokuapp.com/MedicinaFacMenos/${NomUsu}`, {
             method:"PUT",
             headers:{
                 'Content-Type': 'application/json',
@@ -430,7 +430,7 @@ function Restar(boton){
 function Eliminar(boton){
   var usuario = boton.value
     console.log(usuario)
-            fetch(`http://localhost:3000/MedicinaFac/${usuario}`, {
+            fetch(`https://backend--jt.herokuapp.com/MedicinaFac/${usuario}`, {
             method: 'DELETE',
             headers:{
                 'Content-Type': 'application/json',
@@ -459,7 +459,7 @@ function Vender(){
 		}
 		console.log(objeto)
 		// EL METODO MAGICO - EL FETCH
-		fetch('http://localhost:3000/Pedido', {
+		fetch('https://backend--jt.herokuapp.com/Pedido', {
 		method: 'POST',
 		body: JSON.stringify(objeto),
 		headers:{
@@ -508,7 +508,7 @@ var hoy=new Date()
 var Contador=1
 var columns = ["Id", "Nombre", "Precio", "Cantidad","Parcial"];
 cadena=""
-fetch('http://localhost:3000/MedicinaFac', {
+fetch('https://backend--jt.herokuapp.com/MedicinaFac', {
 method: 'GET',
 headers:{
     'Content-Type': 'application/json',
@@ -540,7 +540,7 @@ if(element.Cantidad>0){
 
 function EliminarM(){
   Ids=Id
-  fetch(`http://localhost:3000/MedicinaFac`, {
+  fetch(`https://backend--jt.herokuapp.com/MedicinaFac`, {
             method: 'DELETE',
             headers:{
                 'Content-Type': 'application/json',

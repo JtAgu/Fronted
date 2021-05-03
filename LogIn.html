@@ -208,7 +208,7 @@
 		function ObtenerDatos(){
 		  var nombre = document.querySelector('#nombre').value
 		  var contra = document.querySelector('#Contra').value
-			fetch(`http://localhost:3000/Paciente/${nombre}`,{
+			fetch(`https://backend--jt.herokuapp.com/Paciente/${nombre}`,{
 			  method: 'GET',
 			  headers:{
 				  'Content-Type': 'application/json',
@@ -235,7 +235,7 @@
 		  }
 		  
 		  function EliminarM(){
-  		fetch(`http://localhost:3000/MedicinaFac`, {
+  		fetch(`https://backend--jt.herokuapp.com/MedicinaFac`, {
             method: 'DELETE',
             headers:{
                 'Content-Type': 'application/json',
@@ -253,7 +253,7 @@
 		  function ObtenerEnfermera(){
 		  var nombre = document.querySelector('#nombre').value
 		  var contra = document.querySelector('#Contra').value
-			fetch(`http://localhost:3000/Enfermera/${nombre}`,{
+			fetch(`https://backend--jt.herokuapp.com/Enfermera/${nombre}`,{
 			  method: 'GET',
 			  headers:{
 				  'Content-Type': 'application/json',
@@ -278,7 +278,7 @@
 		  function ObtenerDoc(){
 		  var nombre = document.querySelector('#nombre').value
 		  var contra = document.querySelector('#Contra').value
-			fetch(`http://localhost:3000/Doctor/${nombre}`,{
+			fetch(`https://backend--jt.herokuapp.com/Doctor/${nombre}`,{
 			  method: 'GET',
 			  headers:{
 				  'Content-Type': 'application/json',

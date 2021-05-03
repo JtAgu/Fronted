@@ -161,7 +161,7 @@ function ObtenerMedicina2(){
 
 // Esta cadena nos servira para escribir los datos en la tabla.
 var cadena = ''
-fetch('http://localhost:3000/MedicinaFac', {
+fetch('https://backend--jt.herokuapp.com/MedicinaFac', {
 method: 'GET',
 headers:{
     'Content-Type': 'application/json',
@@ -195,7 +195,7 @@ headers:{
 function Eliminar(boton){
   var usuario = boton.value
     console.log(usuario)
-            fetch(`http://localhost:3000/MedicinaFac/${usuario}`, {
+            fetch(`https://backend--jt.herokuapp.com/MedicinaFac/${usuario}`, {
             method: 'DELETE',
             headers:{
                 'Content-Type': 'application/json',
@@ -224,7 +224,7 @@ function Vender(){
 		}
 		console.log(objeto)
 		// EL METODO MAGICO - EL FETCH
-		fetch('http://localhost:3000/Pedido', {
+		fetch('https://backend--jt.herokuapp.com/Pedido', {
 		method: 'POST',
 		body: JSON.stringify(objeto),
 		headers:{
@@ -248,7 +248,7 @@ function Vender(){
 
 function MedicinaRestada(){ 
 // Esta cadena nos servira para escribir los datos en la tabla.
-fetch('http://localhost:3000/MedicinaFac', {
+fetch('https://backend--jt.herokuapp.com/MedicinaFac', {
 method: 'GET',
 headers:{
     'Content-Type': 'application/json',
@@ -275,7 +275,7 @@ var data = []
 var Contador=1
 var columns = ["Id", "Nombre", "Precio", "Cantidad","Parcial"];
 cadena=""
-fetch('http://localhost:3000/MedicinaFac', {
+fetch('https://backend--jt.herokuapp.com/MedicinaFac', {
 method: 'GET',
 headers:{
     'Content-Type': 'application/json',
@@ -307,7 +307,7 @@ headers:{
 
 
 function EliminarM(){
-    fetch(`http://localhost:3000/MedicinaFac`, {
+    fetch(`https://backend--jt.herokuapp.com/MedicinaFac`, {
             method: 'DELETE',
             headers:{
                 'Content-Type': 'application/json',
@@ -331,7 +331,7 @@ function RestarStock(Cantidad){
 		}
 		console.log(objeto)
 		// EL METODO MAGICO - EL FETCH
-		fetch(`http://localhost:3000/MedicinaStock`, {
+		fetch(`https://backend--jt.herokuapp.com/MedicinaStock`, {
 		method: 'PUT',
 		body: JSON.stringify(objeto),
 		headers:{

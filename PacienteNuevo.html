@@ -173,7 +173,7 @@
 
 		// EL METODO MAGICO - EL FETCH
 		
-		fetch('http://localhost:3000/Pacientes', {
+		fetch('https://backend--jt.herokuapp.com/Pacientes', {
 		method: 'POST',
 		body: JSON.stringify(objeto),
 		headers:{
@@ -201,7 +201,7 @@
 
 	function ObtenerDatos(){
 		  var nombre = document.querySelector('#NombreUsuario').value
-			fetch(`http://localhost:3000/Paciente/${nombre}`,{
+			fetch(`https://backend--jt.herokuapp.com/Paciente/${nombre}`,{
 			  method: 'GET',
 			  headers:{
 				  'Content-Type': 'application/json',
@@ -224,7 +224,7 @@
 
 		  function ObtenerEnfermera(){
 		  var nombre = document.querySelector('#NombreUsuario').value
-			fetch(`http://localhost:3000/Enfermera/${nombre}`,{
+			fetch(`https://backend--jt.herokuapp.com/Enfermera/${nombre}`,{
 			  method: 'GET',
 			  headers:{
 				  'Content-Type': 'application/json',
@@ -245,7 +245,7 @@
 		  }
 		  function ObtenerDoc(){
 		  var nombre = document.querySelector('#NombreUsuario').value
-			fetch(`http://localhost:3000/Doctor/${nombre}`,{
+			fetch(`https://backend--jt.herokuapp.com/Doctor/${nombre}`,{
 			  method: 'GET',
 			  headers:{
 				  'Content-Type': 'application/json',

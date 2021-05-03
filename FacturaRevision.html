@@ -159,7 +159,7 @@
   function CargarCita(){
     document.querySelector("#NoCita").value=sessionStorage.IdCita;
     var nombre = sessionStorage.IdCita;
-            fetch(`http://localhost:3000/CitaIn/${nombre}`,{
+            fetch(`https://backend--jt.herokuapp.com/CitaIn/${nombre}`,{
             method: 'GET',
             headers:{
                 'Content-Type': 'application/json',
@@ -207,7 +207,7 @@ function PDF(Enfermedad){
 }
 function Completado(){
   var nombre=document.querySelector("#NoCita").value
-  fetch(`http://localhost:3000/CitaFacturada/${nombre}`, {
+  fetch(`https://backend--jt.herokuapp.com/CitaFacturada/${nombre}`, {
 method: 'PUT',
 headers:{
     'Content-Type': 'application/json',

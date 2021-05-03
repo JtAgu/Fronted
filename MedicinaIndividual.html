@@ -203,7 +203,7 @@
 function ObtenerDatos() {
     var usuario = sessionStorage.buscar2
     console.log(usuario)
-            fetch(`http://localhost:3000/Medicina/${usuario}`, {
+            fetch(`https://backend--jt.herokuapp.com/Medicina/${usuario}`, {
             method: 'GET',
             headers:{
                 'Content-Type': 'application/json',
@@ -242,7 +242,7 @@ function ObtenerDatos() {
     }
 
             // La estructura del fetch no cambia, solo la URL donde consume la API y el method.
-            fetch(`http://localhost:3000/Medicina/${id}`, {
+            fetch(`https://backend--jt.herokuapp.com/Medicina/${id}`, {
             method: 'PUT',
             body: JSON.stringify(objeto),
             headers:{
@@ -264,7 +264,7 @@ function ObtenerDatos() {
         function Eliminar(){
             var id = sessionStorage.buscar2
             
-            fetch(`http://localhost:3000/Medicina/${id}`, {
+            fetch(`https://backend--jt.herokuapp.com/Medicina/${id}`, {
             method: 'DELETE',
             headers:{
                 'Content-Type': 'application/json',

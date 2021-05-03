@@ -240,7 +240,7 @@
   }
 function Paciente() {
   var usuario = sessionStorage.buscar2          
-            fetch(`http://localhost:3000/Paciente/${usuario}`, {
+            fetch(`https://backend--jt.herokuapp.com/Paciente/${usuario}`, {
             method: 'GET',
             headers:{
                 'Content-Type': 'application/json',
@@ -270,7 +270,7 @@ function Paciente() {
 }
 function Doc() {
   var usuario = sessionStorage.buscar2          
-            fetch(`http://localhost:3000/Doctor/${usuario}`, {
+            fetch(`https://backend--jt.herokuapp.com/Doctor/${usuario}`, {
             method: 'GET',
             headers:{
                 'Content-Type': 'application/json',
@@ -300,7 +300,7 @@ function Doc() {
 }
 function Enfermera() {
   var usuario = sessionStorage.buscar2          
-            fetch(`http://localhost:3000/Enfermera/${usuario}`, {
+            fetch(`https://backend--jt.herokuapp.com/Enfermera/${usuario}`, {
             method: 'GET',
             headers:{
                 'Content-Type': 'application/json',
@@ -398,7 +398,7 @@ function ModificarPac(){
     }
 
             // La estructura del fetch no cambia, solo la URL donde consume la API y el method.
-            fetch(`http://localhost:3000/Personas/${NomUsu}`, {
+            fetch(`https://backend--jt.herokuapp.com/Personas/${NomUsu}`, {
             method: 'PUT',
             body: JSON.stringify(objeto),
             headers:{
@@ -418,7 +418,7 @@ function ModificarPac(){
         // METODO ELIMINAR
         function EliminarPac(){
             var NombreU = sessionStorage.buscar2
-            fetch(`http://localhost:3000/Personas/${NombreU}`, {
+            fetch(`https://backend--jt.herokuapp.com/Personas/${NombreU}`, {
             method: 'DELETE',
             headers:{
                 'Content-Type': 'application/json',
@@ -470,7 +470,7 @@ function ModificarPac(){
     }
 
             // La estructura del fetch no cambia, solo la URL donde consume la API y el method.
-            fetch(`http://localhost:3000/Doctor/${NomUsu}`, {
+            fetch(`https://backend--jt.herokuapp.com/Doctor/${NomUsu}`, {
             method: 'PUT',
             body: JSON.stringify(objeto),
             headers:{
@@ -491,7 +491,7 @@ function ModificarPac(){
         function EliminarDoc(){
             var nombre = document.querySelector('#NombreUsuario').value
             
-            fetch(`http://localhost:3000/Doctor/${nombre}`, {
+            fetch(`https://backend--jt.herokuapp.com/Doctor/${nombre}`, {
             method: 'DELETE',
             headers:{
                 'Content-Type': 'application/json',
