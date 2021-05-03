@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Login UHospital</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+	<link rel="stylesheet" type="text/css3" href="//fonts.googleapis.com/css?family=Lato:400,700,400italic%7CPoppins:300,400,500,700">
+    <link rel="stylesheet" href="css3/bootstrap.css">
+    <link rel="stylesheet" href="css3/style.css">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+<!--===============================================================================================-->
+</head>
+<body>
+	
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<div class="login100-pic js-tilt" data-tilt>
+					<img src="images/Logo.png" alt="IMG">
+				</div>
+
+				<form class="login100-form validate-form">
+					<span class="login100-form-title">
+						UHospital- Log In
+					</span>
+
+					<div class="wrap-input100">
+						<input class="input100" type="text" name="email" placeholder="Usuario" id="nombre">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-envelope" aria-hidden="true"></i>
+						</span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate = "Password is required">
+						<input class="input100" type="password" name="pass" placeholder="Contraseña" id="Contra">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-lock" aria-hidden="true"></i>
+						</span>
+					</div>
+					
+					<div class="container-login100-form-btn">
+						<button onclick="Admin()" type="button" class="login100-form-btn">
+							Ingresar
+						</button>
+					</div>
+					<div class="container-login100-form-btn">
+						<button onclick="NuevoUsuario()" type="button" class="login100-form-btn">
+							Crar Cuenta
+						</button>
+					</div>
+          <br><br>
+				</form>
+			</div>
+		</div>
+	</div>
+	      <!-- Page Footer-->
+		  <footer class="page-footer text-left text-sm-left">
+			<div class="shell-wide">
+	
+			  <div class="page-footer-minimal">
+				<div class="shell-wide">
+				  <div class="range range-50">
+					<div class="cell-sm-6 cell-md-3 cell-lg-4 wow fadeInUp" data-wow-delay=".1s">
+					  <div class="page-footer-minimal-inner">
+						<h4>Horarios de Atencion</h4>
+						<ul class="list-unstyled">
+						  <li>
+							<div class="group-xs"> 
+							  <div>
+								<dl class="list-desc">
+								  <dt>Entre Semana: </dt>
+								  <dd class="text-gray-darker"><span>8:00–20:00</span></dd>
+								</dl>
+							  </div>
+							  <div>
+								<dl class="list-desc">
+								  <dt>Fines de Semana: </dt>
+								  <dd class="text-gray-darker"><span>9:00–18:00</span></dd>
+								</dl>
+							  </div>
+							</div>
+						  </li>
+						  
+						</ul>
+						<h4>Contactenos</h4>
+						<ul class="list-unstyled">
+						  <li>
+							<dl class="list-desc">
+							  <dt><span class="icon icon-sm mdi mdi-map-marker"></span></dt>
+							  <dd><a class="link link-gray-darker" >Ciudad Universitaria 11ª Avenida, Zona 12</a></dd>
+							</dl>
+						  </li>
+						  <li>
+							<dl class="list-desc">
+							  <dt><span class="icon icon-sm mdi mdi-phone"></span></dt>
+							  <dd class="text-gray-darker">PBX: <a class="link link-gray-darker">+502 2418-8000</a>
+							  </dd>
+							</dl>
+						  </li>
+						</ul>
+					  </div>
+					</div>
+					<div class="cell-sm-6 cell-md-5 cell-lg-4 wow fadeInUp" data-wow-delay=".2s">
+					  <div class="page-footer-minimal-inner">
+						<h3>Acerca de Nostros</h3>
+						<h4>Mision</h4>
+						<ul class="list-unstyled">
+						  <li>
+							<dl class="list-desc">
+							  <dt><span class="icon icon-sm mdi mdi-map-marker"></span></dt>
+							  <dd><a class="link link-gray-darker" >Somos una Institución de salud que provee servicios integrales, innovadores y de excelencia, con énfasis en la seguridad de los pacientes y contribuyendo al desarrollo de la ciencia médica en Guatemala.</a></dd>
+							</dl>
+						  </li>
+						  <h4>Vision</h4>
+						  <li>
+							<dl class="list-desc">
+								<dt><span class="icon icon-sm mdi mdi-map-marker"></span></dt>
+								<dd><a class="link link-gray-darker" >Ser la mejor institución de salud en Guatemala, que proporciona servicios médico-hospitalarios de excelencia, con calor humano y ética profesional.</a></dd>
+							  </dl>
+						  </li>
+						</ul>
+					  </div>
+					</div>
+					<div class="cell-sm-8 cell-md-4 wow fadeInUp" data-wow-delay=".3s">
+						<div class="page-footer-minimal-inner">
+							<h4>Desarrollador</h4>
+							<ul class="list-unstyled">
+							  <li>
+								<dl class="list-desc">
+								  <dt><span class="icon icon-sm mdi mdi-map-marker"></span></dt>
+								  <dd><a class="link link-gray-darker" >Justin Josue Aguirre Román</a></dd>
+								</dl>
+							  </li>
+							  <li>
+								<dl class="list-desc">
+								  <dt><span class="icon icon-sm mdi mdi-phone"></span></dt>
+								  <dd class="text-gray-darker">PBX: <a class="link link-gray-darker">+502 3540-3037</a>
+								  </dd>
+								</dl>
+							  </li>
+							  <li>
+								<p class="rights"><span>&copy;&nbsp;</span><span>2021</span><span>&nbsp;</span><span class="copyright-year"></span>UHospital-Universidad de San Carlos de Guatemala</p>
+							  </li>
+							</ul>
+						  </div>
+					</div>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </footer>
+	
+
+	
+<!--===============================================================================================-->	
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/tilt/tilt.jquery.min.js"></script>
+	<script >
+		$('.js-tilt').tilt({
+			scale: 1.1
+		})
+	</script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+	<script src="js3/core.min.js"></script>
+    <script src="js3/script.js"></script>
+	<script>
+		// DECLARANDO FUNCIONES
+  
+		function NuevoUsuario(){
+		  location.href="PacienteNuevo.html"
+		}
+		function Admin(){
+		  var nombre = document.querySelector('#nombre').value
+		  var contra = document.querySelector('#Contra').value
+		  
+		  if(nombre=="admin"&&contra=="1234"){
+			sessionStorage.setItem("buscar3","admin")
+			  location.href="ModuloAdmin.html"
+		  }else{
+			  ObtenerDatos()
+			}
+		}
+		function ObtenerDatos(){
+		  var nombre = document.querySelector('#nombre').value
+		  var contra = document.querySelector('#Contra').value
+			fetch(`http://localhost:3000/Paciente/${nombre}`,{
+			  method: 'GET',
+			  headers:{
+				  'Content-Type': 'application/json',
+				  'Access-Control-Allow-Origin': '*',}})
+			  .then(res => res.json())
+			  .catch(err => {
+				  console.error('Error:', err)
+				  alert("Ocurrio un error, ver la consola")
+			  })
+			  .then(response =>{
+				if(response.Mensaje=="Si"&&response.Contra==contra){
+				  sessionStorage.setItem("buscar2", nombre)
+				  
+				  sessionStorage.setItem("buscar","Pac")
+				  sessionStorage.setItem("buscar3","Pac")
+				  sessionStorage.setItem("Nombre",response.Nombre)
+				  sessionStorage.setItem("Apellido",response.Apellido)
+				  EliminarM()
+				  location.href="ModuloPAciente.html"
+				}else{
+				 ObtenerEnfermera() 
+				} 
+			  })
+		  }
+		  
+		  function EliminarM(){
+  		fetch(`http://localhost:3000/MedicinaFac`, {
+            method: 'DELETE',
+            headers:{
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*',}})
+            .then(res => res.json())
+            .catch(err => {
+                console.error('Error:', err)
+            })
+            .then(response =>{
+            })
+}
+
+
+
+		  function ObtenerEnfermera(){
+		  var nombre = document.querySelector('#nombre').value
+		  var contra = document.querySelector('#Contra').value
+			fetch(`http://localhost:3000/Enfermera/${nombre}`,{
+			  method: 'GET',
+			  headers:{
+				  'Content-Type': 'application/json',
+				  'Access-Control-Allow-Origin': '*',}})
+			  .then(res => res.json())
+			  .catch(err => {
+				  console.error('Error:', err)
+				  alert("Ocurrio un error, ver la consola")
+			  })
+			  .then(response =>{
+				if(response.Mensaje=="Si"&&response.Contra==contra){
+				  sessionStorage.setItem("buscar2", nombre)
+				  sessionStorage.setItem("buscar","Enf")
+				  sessionStorage.setItem("buscar3","Enf")
+				  location.href="ModuloEnfermera.html"
+				}else{
+					ObtenerDoc()
+				}
+				
+			  })
+		  }
+		  function ObtenerDoc(){
+		  var nombre = document.querySelector('#nombre').value
+		  var contra = document.querySelector('#Contra').value
+			fetch(`http://localhost:3000/Doctor/${nombre}`,{
+			  method: 'GET',
+			  headers:{
+				  'Content-Type': 'application/json',
+				  'Access-Control-Allow-Origin': '*',}})
+			  .then(res => res.json())
+			  .catch(err => {
+				  console.error('Error:', err)
+				  alert("Ocurrio un error, ver la consola")
+			  })
+			  .then(response =>{
+				if(response.Mensaje=="Si"&&response.Contra==contra){
+				  sessionStorage.setItem("buscar2", nombre)
+				  sessionStorage.setItem("buscar","Doc")
+				  sessionStorage.setItem("buscar3","Doc")
+				  location.href="ModuloDoc.html"
+				}else{
+				  alert(response.Mensaje)
+				}
+  
+			  })
+		  }
+	</script>        
+
+
+
+</body>
+</html>
