@@ -152,7 +152,7 @@
   <script src="assets/js/main.js"></script>
   <script>
 function AgragDoc(){
-    fetch('https://backend--jt.herokuapp.com/Doctor', {
+fetch('https://backend--jt.herokuapp.com/Doctor', {
 method: 'GET',
 headers:{
     'Content-Type': 'application/json',
@@ -171,7 +171,6 @@ headers:{
         newOptionVal=document.createTextNode(Doc);
         newOption.appendChild(newOptionVal);
         select.insertBefore(newOption,select.lastChild)
-
     });
 })
 
